@@ -1,0 +1,20 @@
+1. Set up Helper File - assert.js
+2. Inside testHelper.js input:
+  var assert = {
+    isTrue: function(assertionToCheck) {
+      if (!assertionToCheck) {
+        throw new Error("assertion failed: " + assertionToCheck + " is not truthy");
+      }
+    };
+  };
+
+  // for each test, if assertionToCheck is true pass test, else throw error
+
+3. Inside testHelper.js input:
+  var equal = {
+    isEqual: function(equalityToCheck) {
+      if (!equalityToCheck) {
+        throw new Error("Equality failed: " + equalityToCheck + " is not equal");
+      }
+    };
+  };
