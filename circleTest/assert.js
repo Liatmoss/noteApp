@@ -5,3 +5,11 @@ var assert = {
     }
   }
 };
+
+var equal = {
+  isEqual: function(equalityToCheck) {
+    if (!equalityToCheck) {
+      throw new Error("Equality failed: " + equalityToCheck + " is not equal");
+    }
+  }
+}
