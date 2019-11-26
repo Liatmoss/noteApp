@@ -24,9 +24,10 @@
     expect.toNotInclude(note.helloWorld(), "blue")
   }
 
-  function testHash() {
+  function testCreate() {
     var note = new Note();
-    expect.toInclude(note.noteStore, "hello world")
+    note.create("Hello World");
+    expect.toInclude(note.noteStore, "Hello World")
   }
 
 
@@ -35,4 +36,4 @@ test2();
 test3();
 test4();
 test5();
-testHash();
+testCreate();
