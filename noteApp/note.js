@@ -9,3 +9,10 @@ Note.prototype.helloWorld = function () {
 Note.prototype.create = function (newNote) {
   this.noteStore.push(newNote);
 };
+
+Note.prototype.viewNote = function () {
+  for (i = 0; i < this.noteStore.length; i ++) {
+      return(this.noteStore[i]);
+  }
+
+};
