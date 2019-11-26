@@ -23,7 +23,7 @@
 // }
 // }
 
-document.getElementById("root").innerHTML = "Notes";
+document.getElementById("heading").innerHTML = "Notes";
 
 var form = document.createElement('INPUT');
 form.setAttribute("type", "text");
@@ -34,3 +34,7 @@ var button = document.createElement("BUTTON");
 var text = document.createTextNode("Create Note");
 button.appendChild(text);
 document.body.appendChild(button);
+
+button.addEventListener ("click", function() {
+  alert("Calls create note method");
+})
