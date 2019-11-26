@@ -35,6 +35,7 @@ var text = document.createTextNode("Create Note");
 button.appendChild(text);
 document.body.appendChild(button);
 
+// to go into controller
 button.addEventListener ("click", function() {
   alert("Calls create note method");
 })
