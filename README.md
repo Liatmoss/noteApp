@@ -1,8 +1,5 @@
 # noteApp
 
-
-
-
 # http-server
 
 We propose to use this as the server environment for the application.  It is a lightweight application built in Javascript.
