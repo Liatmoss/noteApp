@@ -18,3 +18,9 @@ As a programmer
 I can create a new note  
 So I can record something I need to remember.
 ```
+
+```
+As a programmer
+After I have created my notes
+I can view what I need to do
+```
