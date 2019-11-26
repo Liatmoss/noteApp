@@ -10,7 +10,7 @@ Note.prototype.create = function (newNote) {
   this.noteStore.push(newNote);
 };
 
-Note.prototype.viewNote = function () {
+Note.prototype.viewNotes = function () {
   for (i = 0; i < this.noteStore.length; i ++) {
       return(this.noteStore[i]);
   }

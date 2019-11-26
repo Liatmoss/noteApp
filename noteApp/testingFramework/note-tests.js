@@ -33,7 +33,7 @@
   function testView() {
     var note = new Note();
     note.create("Hello World");
-    expect.toEqual(note.viewNote(), "Hello World")
+    expect.toEqual(note.viewNotes(), "Hello World")
   }
 
 test1();
