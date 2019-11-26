@@ -24,8 +24,15 @@
     expect.toNotInclude(note.helloWorld(), "blue")
   }
 
+  function testHash() {
+    var note = new Note();
+    expect.toInclude(note.noteStore, "hello world")
+  }
+
+
 test1();
 test2();
 test3();
 test4();
 test5();
+testHash();
