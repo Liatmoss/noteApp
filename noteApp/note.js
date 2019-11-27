@@ -9,9 +9,7 @@ Note.prototype.create = function (newNote) {
 };
 
 Note.prototype.viewNotes = function () {
-  for (var i = 0; i < this.noteStore.length; i++) {
-    this.truncated.push(this.noteStore[i].slice(0, 20))
-  }
+  this.truncated.push(this.noteStore[this.noteStore.length - 1].slice(0, 20));
   return this.truncated;
 };
 
