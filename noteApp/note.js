@@ -3,7 +3,8 @@ function Note() {
 }
 
 Note.prototype.create = function (newNote) {
-  this.noteStore.push(newNote);
+ this.noteStore.push(newNote);
+ return newNote
 };
 
 Note.prototype.viewNotes = function () {
