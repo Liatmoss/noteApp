@@ -14,3 +14,7 @@ Note.prototype.viewNotes = function () {
   }
   return this.truncated;
 };
+
+Note.prototype.fullNote = function(index) {
+  return this.noteStore[index];
+}

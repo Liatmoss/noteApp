@@ -16,7 +16,15 @@
     expect.toInclude(note.viewNotes(), "Birthday invite list")
   }
 
+  function testFullNote() {
+    var note = new Note();
+    note.create("Birthday invite list: Liat, Natalie");
+    note.create("Hello World!!!!!!!!!!");
+    expect.toEqual(note.fullNote(0), "Birthday invite list: Liat, Natalie")
+  }
+
 
 testCreate();
 testView();
 testTruncate();
+testFullNote();
