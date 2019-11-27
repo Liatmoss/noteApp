@@ -11,6 +11,6 @@ button.appendChild(text);
 note = new Note();
 button.addEventListener ("click", function() {
   note.create(form.value);
-  document.getElementById("entry").value = "Enter note here";
+  document.getElementById("entry").value = form.defaultValue;
   document.getElementById("viewNotes").innerHTML = note.viewNotes(form.value);
 })
