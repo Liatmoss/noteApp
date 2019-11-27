@@ -1,7 +1,7 @@
 document.getElementById("heading").innerHTML = "Notes";
 
 var form = document.getElementById("entry");
-form.setAttribute("placeholder", "Enter note here");
+form.setAttribute("placeholder", "Enter note here" );
 
 
 var button = document.getElementById("button");
