@@ -1,5 +1,6 @@
 function Note() {
   this.noteStore = [];
+  this.truncated = [];
 }
 
 Note.prototype.create = function (newNote) {
@@ -8,5 +9,8 @@ Note.prototype.create = function (newNote) {
 };
 
 Note.prototype.viewNotes = function () {
-  return this.noteStore
+  for (var i = 0; i < this.noteStore.length; i++) {
+    this.truncated.push(this.noteStore[i].slice(0, 20))
+  }
+  return this.truncated;
 };

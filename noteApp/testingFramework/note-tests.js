@@ -10,5 +10,13 @@
     expect.toInclude(note.viewNotes(), "Hello World")
   }
 
+  function testTruncate() {
+    var note = new Note();
+    note.create("Birthday invite list: Liat, Natalie");
+    expect.toInclude(note.viewNotes(), "Birthday invite list")
+  }
+
+
 testCreate();
 testView();
+testTruncate();
