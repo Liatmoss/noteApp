@@ -21,14 +21,20 @@ button.addEventListener ("click", function() {
   var t = document.createTextNode(note.getTruncatedNote(noteIndex));
   noteLink.setAttribute("id", noteIndex);
   noteLink.appendChild(t);
-  noteLink.setAttribute("href","")
+  noteLink.setAttribute("href","#" + noteIndex);
   document.getElementById("truncatedNotes").appendChild(noteLink);
   document.getElementById("truncatedNotes").appendChild(breakx);
   document.getElementById("entry").value = form.defaultValue;
 
   var fullNote = document.getElementById(noteIndex);
-    fullNote.addEventListener ("click", function(clickEvent) {
-      clickEvent.preventDefault();
-      document.getElementById("fullNote").innerHTML = note.fullNote(noteIndex);
-  })
+  //   fullNote.addEventListener ("click", function(clickEvent) {
+  //     clickEvent.preventDefault();
+  //     document.getElementById("fullNote").innerHTML = note.fullNote(noteIndex);
+  // })
+
+   window.addEventListener("hashchange", myFunction);
+   function myFunction(){
+     var noteIndex = location.hash.split("#")[1];
+     document.getElementById("fullNote").innerHTML = note.fullNote(noteIndex);
+   };
 })
