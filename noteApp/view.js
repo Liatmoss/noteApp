@@ -22,16 +22,13 @@ button.addEventListener ("click", function() {
   noteLink.setAttribute("id", noteIndex);
   noteLink.appendChild(t);
   noteLink.setAttribute("href","")
-  document.body.appendChild(noteLink);
-  document.body.appendChild(breakx);
+  document.getElementById("truncatedNotes").appendChild(noteLink);
+  document.getElementById("truncatedNotes").appendChild(breakx);
   document.getElementById("entry").value = form.defaultValue;
 
   var fullNote = document.getElementById(noteIndex);
     fullNote.addEventListener ("click", function(clickEvent) {
       clickEvent.preventDefault();
-      var fullNote = document.createElement("P");
-      var fullText = document.createTextNode(note.fullNote(noteIndex));
-      fullNote.appendChild(fullText);
-      document.body.appendChild(fullNote);
+      document.getElementById("fullNote").innerHTML = note.fullNote(noteIndex);
   })
 })
