@@ -15,6 +15,7 @@ button.appendChild(text);
 note = new Note();
 button.addEventListener ("click", function() {
   note.create(form.value);
+  var breakx = document.createElement("BR");
   var noteIndex = note.noteIndex(form.value);
   var noteLink = document.createElement("A");
   console.log(form.value);
@@ -24,10 +25,9 @@ button.addEventListener ("click", function() {
   noteLink.setAttribute("id", noteIndex);
   noteLink.appendChild(t);
   noteLink.setAttribute("href","")
-  document.body.appendChild(noteLink)
-  var break = document.createElement("BR");
-  
-  // document.getElementById("entry").value = form.defaultValue;
+  document.body.appendChild(noteLink);
+  document.body.appendChild(breakx);
+  document.getElementById("entry").value = form.defaultValue;
   // document.getElementById("viewNotes").innerHTML = note.viewNotes(form.value);
 })
 
