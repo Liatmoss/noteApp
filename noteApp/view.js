@@ -28,6 +28,10 @@ button.addEventListener ("click", function() {
 
   window.addEventListener("hashchange", myFunction);
     function myFunction() {
-    document.getElementById("fullNote").innerHTML = note.fullNote(noteIndex);
+    var fullNote = document.getElementById(noteIndex);
+    fullNote.addEventListener("click", function(clickEvent) {
+      clickEvent.preventDefault();
+      document.getElementById("fullNote").innerHTML = note.fullNote(noteIndex);
+    });
   };
 });
