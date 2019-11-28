@@ -4,7 +4,6 @@ var form = document.getElementById("entry");
 form.setAttribute("placeholder", "Enter note here" );
 form.style.fontSize = '15px';
 
-
 var button = document.getElementById("button");
 button.style.width = '100px'
 button.style.height = '50px'
