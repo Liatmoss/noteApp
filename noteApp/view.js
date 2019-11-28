@@ -4,7 +4,6 @@ var form = document.getElementById("entry");
 form.setAttribute("placeholder", "Enter note here" );
 form.style.fontSize = '15px';
 
-
 var button = document.getElementById("button");
 button.style.width = '100px'
 button.style.height = '50px'
@@ -21,14 +20,14 @@ button.addEventListener ("click", function() {
   var t = document.createTextNode(note.getTruncatedNote(noteIndex));
   noteLink.setAttribute("id", noteIndex);
   noteLink.appendChild(t);
-  noteLink.setAttribute("href","")
+  var hash = "#" + noteIndex;
+  noteLink.setAttribute("href", hash);
   document.getElementById("truncatedNotes").appendChild(noteLink);
   document.getElementById("truncatedNotes").appendChild(breakx);
   document.getElementById("entry").value = form.defaultValue;
 
-  var fullNote = document.getElementById(noteIndex);
-    fullNote.addEventListener ("click", function(clickEvent) {
-      clickEvent.preventDefault();
-      document.getElementById("fullNote").innerHTML = note.fullNote(noteIndex);
-  })
-})
+  window.addEventListener("hashchange", myFunction);
+    function myFunction() {
+    document.getElementById("fullNote").innerHTML = note.fullNote(noteIndex);
+  };
+});
