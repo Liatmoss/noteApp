@@ -18,3 +18,9 @@ button.addEventListener ("click", function() {
   document.getElementById("entry").value = form.defaultValue;
   document.getElementById("viewNotes").innerHTML = note.viewNotes(form.value);
 })
+
+var fullNote = document.getElementById("viewNotes");
+  fullNote.addEventListener ("click", function(clickEvent) {
+    clickEvent.preventDefault();
+    document.getElementById("fullNote").innerHTML = note.fullNote(0)
+})

@@ -10,7 +10,7 @@ Note.prototype.create = function (newNote) {
 
 Note.prototype.viewNotes = function () {
   this.truncated.push(this.noteStore[this.noteStore.length - 1].slice(0, 20));
-  return this.truncated.join("<br />").link();
+  return this.truncated.join("<br />");
 };
 
 Note.prototype.fullNote = function(index) {
