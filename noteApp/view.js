@@ -30,7 +30,6 @@ button.addEventListener ("click", function() {
     function myFunction() {
     var fullNote = document.getElementById(noteIndex);
     fullNote.addEventListener("click", function(clickEvent) {
-      clickEvent.preventDefault();
       document.getElementById("fullNote").innerHTML = note.fullNote(noteIndex);
     });
   };
