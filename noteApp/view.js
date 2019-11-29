@@ -12,16 +12,16 @@ var text = document.createTextNode("Create Note");
 button.appendChild(text);
 
 function renderSummary(truncatedtext, index)  {
-    var breakx = document.createElement("BR");
-    var noteLink = document.createElement("A");
-    var t = document.createTextNode(truncatedtext);
-    noteLink.setAttribute("id", index);
-    noteLink.appendChild(t);
-    var hash = "#" + index;
-    noteLink.setAttribute("href", hash);
-    document.getElementById("truncatedNotes").appendChild(noteLink);
-    document.getElementById("truncatedNotes").appendChild(breakx);
-    document.getElementById("entry").value = form.defaultValue;
+  var breakx = document.createElement("BR");
+  var noteLink = document.createElement("A");
+  var t = document.createTextNode(truncatedtext);
+  noteLink.setAttribute("id", index);
+  noteLink.appendChild(t);
+  var hash = "#" + index;
+  noteLink.setAttribute("href", hash);
+  document.getElementById("truncatedNotes").appendChild(noteLink);
+  document.getElementById("truncatedNotes").appendChild(breakx);
+  document.getElementById("entry").value = form.defaultValue;
 }
 
 function renderText(outputText) {

@@ -8,11 +8,11 @@ button.addEventListener ("click", function() {
 
 
   window.addEventListener("hashchange", myFunction);
-    function myFunction() {
+  function myFunction() {
     var fullNote = document.getElementById(index);
     fullNote.addEventListener("click", function() {
-          var outputText = note.fullNote(index);
-          renderText(outputText);
+      var outputText = note.fullNote(index);
+      renderText(outputText);
     });
   };
 });
