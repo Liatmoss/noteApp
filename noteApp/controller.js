@@ -1,3 +1,5 @@
+window.onload = function(){
+
 
 note = new Note();
 button.addEventListener ("click", function() {
@@ -16,3 +18,4 @@ button.addEventListener ("click", function() {
     });
   };
 });
+}
